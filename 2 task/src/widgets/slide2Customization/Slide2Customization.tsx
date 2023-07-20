@@ -39,6 +39,7 @@ export const Slide2Customization = () => {
       <div>
         {pictures.map(({ mini }, id) =>
           <Image
+            key={id}
             src={mini}
             draggable={'false'}
             className={cn(classes.miniPic, { [classes.miniPicActive]: id === activePicture })}
