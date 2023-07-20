@@ -40,7 +40,7 @@ export const Header = () =>
 
     <nav className={classes.nav}>
       {menuLinks.map(({ href, label }, id) =>
-        <A key={id} href={href} active={current === href} className={classes.link}>
+        <A key={id} href={href} isActive={current === href} className={classes.link}>
           {label}
         </A>)}
     </nav>

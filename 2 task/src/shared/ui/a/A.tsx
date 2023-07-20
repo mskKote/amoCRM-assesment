@@ -8,9 +8,9 @@ type Sizes = "sm" | "md" | "lg" | undefined
 
 type Props = LinkProps & React.HTMLAttributes<HTMLAnchorElement> & {
   size?: Sizes,
-  uppercase?: true,
+  uppercase?: boolean,
   variant?: "filled" | "outline",
-  active?: boolean
+  isActive?: boolean
 }
 
 export const A = (props: Props) =>
@@ -21,7 +21,7 @@ export const A = (props: Props) =>
     getClasses(props.variant),
     {
       [classes.uppercase]: props.uppercase,
-      [classes.active]: props.active
+      [classes.active]: props.isActive
     },
     props.className)} />
 
