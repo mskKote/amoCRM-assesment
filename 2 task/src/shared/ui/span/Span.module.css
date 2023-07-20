@@ -1,0 +1,7 @@
+.uppercase {
+  text-transform: capitalize;
+}
+
+.default {
+  color: #999999;
+}

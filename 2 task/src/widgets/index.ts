@@ -1,0 +1,5 @@
+export { Header } from "./header/Header"
+export { Slide1Main } from "./slide1Main/Slide1Main"
+export { Slide2Customization } from "./slide2Customization/Slide2Customization"
+export { Slide3News } from "./slide3News/Slide3News"
+export { Footer } from "./footer/Footer"

@@ -1,0 +1,29 @@
+.section {
+  background-color: #2A313C;
+  display         : flex;
+  flex-direction  : row;
+  gap             : 15vw;
+}
+
+.miniPic {
+  cursor     : pointer;
+  user-select: none;
+  border     : 5px solid transparent;
+}
+
+.miniPicActive {
+  border-radius   : 20px;
+  border          : 5px solid #3B3D46;
+  background-color: #3B3D46;
+}
+
+.h1 {
+  font-size  : 64px;
+  line-height: 74px;
+}
+
+.paragraph {
+  color      : #DFDFDF;
+  font-size  : 20px;
+  line-height: 30px;
+}

@@ -1,0 +1,6 @@
+export { P } from "./p/P"
+export { A } from "./a/A"
+export { H } from "./h/H"
+export { Span } from "./span/Span"
+export { FireSpan } from "./span/FireSpan"
+export * as fonts from "./fonts"

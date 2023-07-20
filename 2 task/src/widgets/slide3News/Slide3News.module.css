@@ -1,0 +1,73 @@
+.news {
+  width         : 100%;
+  padding-inline: 60px;
+}
+
+.newsBlock {
+  display        : flex;
+  flex-direction : row;
+  align-items    : flex-end;
+  justify-content: space-between;
+}
+
+.h1 {
+  font-size  : 64px;
+  line-height: 74px;
+}
+
+.articlesGrid {
+  display: grid;
+  gap    : 24px;
+  grid-template-areas:
+    "big big small1 small2"
+    "big big small3 small4";
+}
+
+.articlesGrid>:nth-child(1) {
+  grid-area: big;
+}
+
+.articlesGrid>:nth-child(2) {
+  grid-area: small1;
+}
+
+.articlesGrid>:nth-child(3) {
+  grid-area: small2;
+}
+
+.articlesGrid>:nth-child(4) {
+  grid-area: small3;
+}
+
+.articlesGrid>:nth-child(5) {
+  grid-area: small4;
+}
+
+.articleCard {
+  display       : flex;
+  flex-direction: column;
+}
+
+.articleCard .articlePublished {
+  color: #57B8FF;
+}
+
+.articleH {
+  font-size  : 24px;
+  line-height: 34px;
+}
+
+.articleBig .articleH {
+  font-size  : 36px;
+  line-height: 46px;
+}
+
+.articlePublished {
+  font-size  : 16px;
+  line-height: 16px;
+}
+
+.articleBig .articlePublished {
+  font-size  : 18px;
+  line-height: 18px;
+}

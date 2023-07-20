@@ -1,0 +1,38 @@
+.default {
+  color: white;
+}
+
+.sm {
+  font-size  : 15px;
+  line-height: 25px;
+}
+
+.md {
+  font-size  : 17px;
+  line-height: 27px;
+}
+
+.lg {
+  font-size  : 18px;
+  line-height: 28px;
+}
+
+.uppercase {
+  text-transform: capitalize;
+}
+
+.filled {
+  background-color: #57B8FF;
+  border          : 1px solid #57B8FF;
+  padding         : 21px 34px;
+}
+
+.outline {
+  color  : white;
+  border : 1px solid white;
+  padding: 21px 34px;
+}
+
+.active {
+  color: #FAC422;
+}
