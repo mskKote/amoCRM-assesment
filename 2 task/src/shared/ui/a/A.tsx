@@ -3,6 +3,7 @@ import Link, { type LinkProps } from 'next/link'
 import { orbitron } from '../fonts'
 import cn from 'classnames'
 import classes from "./A.module.css"
+import { Fascinate } from 'next/font/google'
 
 type Sizes = "sm" | "md" | "lg" | undefined
 
@@ -20,7 +21,7 @@ export const A = (props: Props & { extra?: ExtraProps }) => {
   let linkProps = { ...props }
   delete linkProps.extra
 
-  return <Link {...linkProps} className={cn(
+  return <Link prefetch={false || linkProps.prefetch} {...linkProps} className={cn(
     orbitron.className,
     classes.default,
     getClasses(props.extra?.size),
