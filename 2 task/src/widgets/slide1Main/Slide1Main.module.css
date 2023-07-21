@@ -1,13 +1,19 @@
 .section {
-  width         : 100%;
-  padding-left  : 60px;
-  display       : flex;
-  flex-direction: row;
+  width   : 100%;
+  position: relative;
 }
 
 .h1 {
-  font-size  : 72px;
-  line-height: 86px;
+  font-size    : 72px;
+  line-height  : 86px;
+  margin-bottom: 45px;
+}
+
+.paragraph {
+  margin-block: 45px;
+  max-width   : 42ch;
+  font-size   : 18px;
+  line-height : 28px
 }
 
 .underline {
@@ -15,14 +21,15 @@
 }
 
 .underline::after {
-  content   : '';
-  position  : absolute;
-  width     : 100%;
-  height    : 100%;
-  left      : 0;
-  bottom    : 0;
-  transform : translateY(100%);
-  background: url(/slide1/underline.svg) no-repeat;
+  content       : '';
+  position      : absolute;
+  width         : 100%;
+  height        : 100%;
+  left          : 0;
+  bottom        : 0;
+  pointer-events: none;
+  transform     : translateY(100%) rotate(2deg);
+  background    : url(/slide1/underline.svg) no-repeat;
 }
 
 .mainLinks {
@@ -36,7 +43,7 @@
   display       : flex;
   flex-direction: row;
   gap           : 50px;
-  transform     : translate(-160px, 0) rotate(270deg);
+  transform     : translate(-160px, -200px) rotate(270deg);
   position      : absolute;
 }
 
@@ -46,7 +53,81 @@
 }
 
 .blue {
-  background: #57B8FF;
-  height    : 100%;
-  width     : 40vw;
+  height       : 100%;
+  width        : 46%;
+  background   : #57B8FF;
+  position     : absolute;
+  right        : 0;
+  top          : 0;
+  bottom       : 0;
+  padding-block: min(30vw, 250px);
+}
+
+.picture {
+  transform: translateX(-10%);
+}
+
+.section__caption {
+  padding-block : min(30vw, 250px);
+  position      : relative;
+  z-index       : 1;
+  padding-inline: 60px;
+  width         : calc(100% - 46%);
+}
+
+@media screen and (min-width: 1921px) {
+  .picture {
+    transform : translateX(5%);
+    width     : 100%;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .picture {
+    transform : translateX(5%);
+    width     : 100%;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .picture {
+    transform: translateX(5%);
+  }
+
+  .h1>br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .section__caption {
+    width: 100%
+  }
+
+  .blue {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section__caption {
+    padding-inline: 30px;
+  }
+
+  .h1 {
+    font-size  : 50px;
+    line-height: 60px;
+  }
+
+  .verticalList {
+    margin-block   : 45px;
+    display        : flex;
+    flex-direction : row;
+    gap            : 50px;
+    transform      : none;
+    position       : relative;
+    justify-content: space-between;
+  }
 }

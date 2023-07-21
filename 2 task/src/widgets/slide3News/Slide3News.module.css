@@ -1,6 +1,7 @@
 .news {
   width         : 100%;
   padding-inline: 60px;
+  padding-block : 130px;
 }
 
 .newsBlock {
@@ -8,6 +9,7 @@
   flex-direction : row;
   align-items    : flex-end;
   justify-content: space-between;
+  margin-bottom  : 65px;
 }
 
 .h1 {
@@ -17,7 +19,7 @@
 
 .articlesGrid {
   display: grid;
-  gap    : 24px;
+  gap    : max(3vmax, 24px);
   grid-template-areas:
     "big big small1 small2"
     "big big small3 small4";
@@ -48,6 +50,10 @@
   flex-direction: column;
 }
 
+.articleCard:hover h2 {
+  text-decoration: underline;
+}
+
 .articleCard .articlePublished {
   color: #57B8FF;
 }
@@ -63,11 +69,86 @@
 }
 
 .articlePublished {
-  font-size  : 16px;
-  line-height: 16px;
+  font-size   : 16px;
+  line-height : 16px;
+  margin-block: 30px 20px;
 }
 
 .articleBig .articlePublished {
-  font-size  : 18px;
-  line-height: 18px;
+  font-size   : 18px;
+  line-height : 18px;
+  margin-block: 54px 28px;
+}
+
+.articlePic {
+  width          : 100%;
+  height         : auto;
+  object-fit     : cover;
+  object-position: top;
+  border-radius  : 25px;
+}
+
+.articleBig .articlePic {
+  border-radius: 50px;
+}
+
+
+@media screen and (min-width: 1400px) {
+  .news {
+    padding-inline: 100px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .newsBlock {
+    flex-direction: column;
+    align-items   : stretch;
+    gap           : 15px;
+  }
+
+  .articlesGrid {
+    grid-template-areas:
+      "big big"
+      "big big"
+      "small1 small2"
+      "small3 small4";
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .news {
+    padding-inline: 30px;
+  }
+
+  .h1 {
+    font-size  : 50px;
+    line-height: 60px;
+  }
+
+  .articlePublished,
+  .articleBig .articlePublished {
+    font-size  : 13px;
+    line-height: 13px;
+  }
+
+  .articleH,
+  .articleBig .articleH {
+    font-size  : 20px;
+    line-height: 30px;
+  }
+
+  .articlePic,
+  .articleBig .articlePic {
+    height       : 250px;
+    border-radius: 25px;
+  }
+
+  .articlesGrid {
+    grid-template-areas:
+      "big"
+      "small1"
+      "small2"
+      "small3"
+      "small4";
+  }
 }

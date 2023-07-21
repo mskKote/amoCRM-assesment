@@ -9,7 +9,7 @@
   grid-template-columns: repeat(4, 1fr);
   justify-content      : center;
   align-items          : flex-start;
-  gap                  : 150px;
+  gap                  : min(10vw, 150px);
   color                : #999;
 }
 
@@ -21,7 +21,8 @@
 
 .link {
   color      : #999;
-  line-height: 37.5px
+  line-height: 37.5px;
+  text-align : left;
 }
 
 .footer__links {
@@ -42,4 +43,18 @@
 
 .paragraph {
   line-height: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    padding-inline       : 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    grid-template-columns: repeat(1, 1fr);
+    gap                  : 50px;
+  }
 }

@@ -1,7 +1,50 @@
 .default {
-  color: white;
+  color          : white;
+  text-align     : center;
+  text-decoration: none;
 }
 
+.default:focus {
+  outline: 2px white solid;
+}
+
+.default:hover {
+  text-decoration: underline;
+}
+
+.none:hover {
+  text-decoration: none;
+}
+
+.filled {
+  background-color: #57B8FF;
+  border          : 1px solid #57B8FF;
+  padding         : 21px 34px;
+  transition      : 0.2 filter;
+}
+
+.filled:hover {
+  text-decoration: none;
+  filter         : brightness(0.9);
+}
+
+.filled:active {
+  text-decoration: none;
+  filter         : brightness(0.8);
+}
+
+
+.outline {
+  color  : white;
+  border : 1px solid white;
+  padding: 21px 34px;
+}
+
+.active {
+  color: #FAC422;
+}
+
+/* Размеры */
 .sm {
   font-size  : 15px;
   line-height: 25px;
@@ -17,22 +60,7 @@
   line-height: 28px;
 }
 
+/* Extra */
 .uppercase {
   text-transform: capitalize;
-}
-
-.filled {
-  background-color: #57B8FF;
-  border          : 1px solid #57B8FF;
-  padding         : 21px 34px;
-}
-
-.outline {
-  color  : white;
-  border : 1px solid white;
-  padding: 21px 34px;
-}
-
-.active {
-  color: #FAC422;
 }

@@ -22,26 +22,29 @@ export const Slide2Customization = () => {
 
     <Image
       alt='Активный персонаж'
+      className={classes.bigPic}
+      priority={false}
       src={pictures[activePicture].full}
     />
 
-    <div>
-      <FireSpan uppercase>Future of esport</FireSpan>
+    <div className={classes.section__content}>
+      <FireSpan extra={{ uppercase: true }}>Future of esport</FireSpan>
 
       <H order={1} className={classes.h1}>
-        Customize your <br /> Own Character
+        Customize your Own Character
       </H>
 
       <P className={classes.paragraph}>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
       </P>
 
-      <div>
+      <div className={classes.content__choice}>
         {pictures.map(({ mini }, id) =>
           <Image
             key={id}
             src={mini}
-            draggable={'false'}
+            draggable={false}
+            priority={false}
             className={cn(classes.miniPic, { [classes.miniPicActive]: id === activePicture })}
             onClick={() => setActive(id)}
             alt={id === activePicture ? "Активный персонаж" : "Персонаж"}

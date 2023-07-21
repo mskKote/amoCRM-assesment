@@ -6,24 +6,32 @@ import classes from "./A.module.css"
 
 type Sizes = "sm" | "md" | "lg" | undefined
 
-type Props = LinkProps & React.HTMLAttributes<HTMLAnchorElement> & {
+type ExtraProps = {
   size?: Sizes,
   uppercase?: boolean,
-  variant?: "filled" | "outline",
+  variant?: "filled" | "outline" | "none",
   isActive?: boolean
 }
 
-export const A = (props: Props) =>
-  <Link {...props} className={cn(
+type Props = LinkProps & React.HTMLAttributes<HTMLAnchorElement>
+
+export const A = (props: Props & { extra?: ExtraProps }) => {
+
+  let linkProps = { ...props }
+  delete linkProps.extra
+
+  return <Link {...linkProps} className={cn(
     orbitron.className,
     classes.default,
-    getClasses(props.size),
-    getClasses(props.variant),
+    getClasses(props.extra?.size),
+    getClasses(props.extra?.variant),
     {
-      [classes.uppercase]: props.uppercase,
-      [classes.active]: props.isActive
+      [classes.uppercase]: props.extra?.uppercase,
+      [classes.active]: props.extra?.isActive
     },
     props.className)} />
+}
+
 
 function getClasses(size?: string): string | undefined {
   return size && classes[size]

@@ -45,7 +45,7 @@ export const Footer = () =>
         Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl nunc quam ac sed turpis volutpat. Cursus sed massa non.
       </P>
     </div>
-    <div className={classes.footer__links}>
+    <div className={classes.footer__links} id='menu'>
       <H order={2} className={classes.h2}>Menu Items</H>
       {menuLinks.map(({ href, label }, id) =>
         <A key={id} href={href} className={classes.link}>

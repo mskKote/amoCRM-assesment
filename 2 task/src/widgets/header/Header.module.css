@@ -1,11 +1,14 @@
 .header {
-  margin-top    : 20px;
-  padding-inline: 60px;
-  display       : flex;
-  flex-direction: row;
-  align-items   : center;
-  position      : absolute;
-  top           : 0;
+  margin-top     : 20px;
+  padding-inline : 60px;
+  display        : flex;
+  flex-direction : row;
+  align-items    : center;
+  justify-content: center;
+  position       : absolute;
+  top            : 0;
+  z-index        : 10;
+  width          : 100%;
 }
 
 .bucket {
@@ -39,4 +42,60 @@
 .link {
   display: block;
   height : fit-content;
+}
+
+.menu {
+  display    : flex;
+  align-items: center;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .mobileMenu {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .header {
+    padding-inline : 30px;
+    justify-content: space-between;
+  }
+
+  .contantUs {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding-inline : 30px;
+    justify-content: space-between;
+    width          : 100%;
+  }
+
+  .mobileMenu {
+    padding: 10px 5px;
+  }
+
+  .bucket {
+    margin-right: 30px;
+    width       : 20px;
+  }
+
+  .mobileMenu {
+    max-width  : min-content;
+    font-size  : 13px;
+    line-height: 20px;
+  }
+
+  .pic {
+    width : 130px;
+    height: auto;
+  }
 }

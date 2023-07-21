@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Проект для amoCRM
 
-## Getting Started
+## Зачем использовал Next.js?
 
-First, run the development server:
+1. SPA vs SSG - статическая страничка выигрывает по SEO
+2. Оптимизация шрифтов & изображений
+3. Потенциальные указанные страницы (магазин, блог и ещё 6 штук) легче поддерживать на Next.js, нежели на ваниле
+4. Next.js неплохой выбор среди других фреймворков. Это показывает опрос [state of JS](https://2022.stateofjs.com/en-US/libraries/), где позиции Next.js растут уже 5 лет
+5. Моё желание продемонстрировать знание React и понравиться
+
+## Почему меня стоит рассмотреть
+
+- 2.5 года на frontend: писал на React | Angular, руководил командой, обучал людей, составлял ТЗ
+
+- Пет проект на Next.js с SSR и на backend Go с PostgreSQL | ElasticSearch | Jaeger | ELK | Prometheus | Grafana. Там работал по Feature-Sliced Design
+
+- На стажировке в OZON на backend написал поисковый микросервис с ElasticSearch, закрывал задачи на логистические микросервисы и познакомился с процессами большой компании (Scrum, CI/CD, инфраструктура)
+
+- Пишу на backend Go | C# | Java | Node.js
+
+- Написал 2 статьи на Хабр и интересно написать про потенциальные проекты
+
+- Перевёл документацию react-redux. Знаю английский на B2
+
+- Люблю работать в офисе
+
+
+Всё обо всём → https://shorturl.at/blANU
+
+
+## Как стартовать проект?
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Затем открыть в браузере [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Развёрнуто на Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+[Ссылка на сайт](https://for-amocrm.vercel.app/)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

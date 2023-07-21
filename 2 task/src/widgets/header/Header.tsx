@@ -31,6 +31,7 @@ export const Header = () =>
   <header className={classes.header}>
     <A href={"/"} className={classes.link}>
       <Image
+        className={classes.pic}
         src={'/shared/logo.svg'}
         alt={'логотип'}
         width={170}
@@ -40,24 +41,31 @@ export const Header = () =>
 
     <nav className={classes.nav}>
       {menuLinks.map(({ href, label }, id) =>
-        <A key={id} href={href} isActive={current === href} className={classes.link}>
+        <A key={id} href={href} extra={{ isActive: current === href }} className={classes.link}>
           {label}
         </A>)}
     </nav>
 
-    {/* Корзина */}
-    <A href={"/bucket"} className={cn(classes.link, classes.bucket)}>
-      <Image
-        src={'/shared/bucket.svg'}
-        alt={'логотип'}
-        width={33}
-        height={32}
-      />
-      <Span className={classes.bucketItems}>0</Span>
-    </A>
+    <div className={classes.menu}>
+      {/* Корзина */}
+      <A href={"/bucket"} className={cn(classes.link, classes.bucket)}>
+        <Image
+          src={'/shared/bucket.svg'}
+          alt={'логотип'}
+          width={33}
+          height={32}
+        />
+        <Span className={classes.bucketItems}>0</Span>
+      </A>
 
-    {/* Контакты */}
-    <A href={"/contact-us"} variant={'outline'}>
-      Contact us
-    </A>
+      {/* Контакты */}
+      <A className={classes.contantUs} href={"/contact-us"} extra={{ variant: 'outline' }}>
+        Contact us
+      </A>
+
+      {/* Все ссылки есть в футере */}
+      <A className={classes.mobileMenu} href={"#menu"} extra={{ variant: 'outline' }}>
+        Menu & Contacts
+      </A>
+    </div>
   </header>
