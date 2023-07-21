@@ -21,7 +21,7 @@ export const A = (props: Props & { extra?: ExtraProps }) => {
   let linkProps = { ...props }
   delete linkProps.extra
 
-  return <Link prefetch={false || linkProps.prefetch} {...linkProps} className={cn(
+  return <Link prefetch={false || (linkProps.prefetch ?? false)} {...linkProps} className={cn(
     orbitron.className,
     classes.default,
     getClasses(props.extra?.size),
